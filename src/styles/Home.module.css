@@ -1,0 +1,194 @@
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #4502d9 -25%, #000000 100%) 100%
+    no-repeat;
+  overflow: hidden;
+}
+
+/* Nav Styles */
+
+.navWrapper {
+  width: 100%;
+  display: flex;
+  padding-inline: 10%;
+  padding-top: 25px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navContent h5 {
+  margin: 0;
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.logo {
+  width: 27px;
+  height: 22px;
+}
+
+/* Primary Container Styles */
+
+.schoolSelectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.schoolSelectionContainer h1 {
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 25px;
+  font-size: 36px;
+}
+
+.schoolSelection {
+  position: relative;
+  padding: 0px 50px;
+}
+
+/* Search Bar Styles */
+
+.search {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  border-bottom: 1px solid #9a9a9a;
+  padding-bottom: 10px;
+  z-index: 99;
+}
+
+.search input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+}
+
+.search input::placeholder {
+  color: #9a9a9a;
+}
+
+.searchIcon {
+  cursor: pointer;
+  width: 15px;
+  height: auto;
+}
+
+/* School component styles */
+
+.schools {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 35px,
+    black calc(100% - 5px),
+    transparent 100%
+  );
+}
+
+.school {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px 12.5px;
+  border-radius: 25px;
+  color: white;
+  gap: 15px;
+  background: #282e3c;
+  transition: background 0.15s;
+}
+
+.school:first-child {
+  margin-top: 30px;
+}
+
+.school:hover {
+  cursor: pointer;
+  background: #161921;
+}
+
+.schoolIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(127.55deg, #0224d9 -44.16%, #04002b 74.85%)
+    no-repeat;
+  min-height: 55px;
+  min-width: 55px;
+}
+
+.schoolIcon h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.schoolInfo {
+  padding-right: 30px;
+}
+
+.schoolInfo h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.schoolInfo p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.schools {
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+.schools::-webkit-scrollbar {
+  display: none;
+}
+
+/* Some modifications for smaller screens */
+@media screen and (max-width: 575px) {
+  .navContent .logo {
+    width: 26px;
+    height: 21px;
+  }
+
+  .navContent h5 {
+    font-size: 17px;
+  }
+
+  .schoolIcon {
+    min-height: 47.5px;
+    min-width: 47.5px;
+  }
+
+  .schoolIcon h1 {
+    font-size: 26px;
+  }
+
+  .schoolInfo {
+    padding-right: 15px;
+  }
+
+  .schoolInfo h5 {
+    font-size: 15px;
+  }
+  .schoolInfo p {
+    font-size: 13px;
+  }
+}
